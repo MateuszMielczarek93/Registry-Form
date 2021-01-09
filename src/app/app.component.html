@@ -1,7 +1,26 @@
 <div class="example-container">
   <mat-form-field appearance="outline">
-    <mat-label>Enter your email</mat-label>
-    <input [formControl]="email" type="email" matInput placeholder="pat@example.com">
+
+
+    <mat-label>Enter email</mat-label>
+    <input  matInput [formControl]="email" type="email" placeholder="pat@example.com">
     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
+
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Enter password</mat-label>
+    <input matInput type ="password"  placeholder="Password">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Enter password</mat-label>
+    <input matInput type ="password"  placeholder="Password">
+  </mat-form-field>
+
+  
+  
+
+
+
 </div>

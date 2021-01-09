@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -18,5 +18,9 @@ export class AppComponent {
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
+  
+
+
+  
 
 }
