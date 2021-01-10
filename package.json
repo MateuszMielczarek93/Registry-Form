@@ -23,6 +23,7 @@
     "@angular/router": "~11.0.6",
     "@rxweb/reactive-form-validators": "^2.1.2",
     "@types/jasminewd2": "^2.0.8",
+    "ng-recaptcha": "^7.0.1",
     "ng-validate-equal": "^1.0.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

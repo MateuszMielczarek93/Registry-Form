@@ -10,8 +10,14 @@ import { FormControl, Validators, FormGroup, AbstractControl} from '@angular/for
 })
 export class AppComponent {
   title = 'registry';
+  
+  resolved(captchaResponse: string) {
+    console.log(`Resolved captcha with response: ${captchaResponse}`);
+  }
+  
   email = new FormControl('', [Validators.required, Validators.email],);
 
+  
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'You must enter a valid email';
