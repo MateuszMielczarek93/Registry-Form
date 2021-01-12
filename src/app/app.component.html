@@ -1,32 +1,8 @@
-<style>
-.example-container{
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.example-container2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.example-container3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Buttons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>
-
 
 <div class="Forms">
 
-
+<!--Email form-->
+<form novalidate>
 <div class="example-container">
   <mat-form-field appearance="outline">
     <mat-label>Enter email *</mat-label>
@@ -35,7 +11,8 @@
   </mat-form-field>
 </div>
  
-<form>
+<!--Password and confirm password form-->
+
   <mat-form-field class = "example-container2" appearance="outline">
     <mat-label>Password</mat-label>
   <input matInput name="password" type= "password" [formControl]="passFormControl" 
@@ -54,10 +31,25 @@
 </form>
 </div>
 
-
+<!--Submit button-->
 <div class="Buttons">
-<button  mat-raised-button color="primary">aaaaa</button>
+<button (click)="submitButton()" mat-raised-button color="primary">Send</button>
 </div>
+
+  <!--store and submit values-->
+<div>
+
+  
+</div>
+   
+  
+
+
+
+
+
+
+
 
 
 

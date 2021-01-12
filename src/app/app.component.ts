@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators, FormGroup, AbstractControl} from '@angular/forms';
+import { FormControl, Validators} from '@angular/forms';
 
 
 @Component({
@@ -11,13 +11,9 @@ import { FormControl, Validators, FormGroup, AbstractControl} from '@angular/for
 export class AppComponent {
   title = 'registry';
   
-  resolved(captchaResponse: string) {
-    console.log(`Resolved captcha with response: ${captchaResponse}`);
-  }
-  
-  email = new FormControl('', [Validators.required, Validators.email],);
 
-  
+  //Email validation
+  email = new FormControl('', [Validators.required, Validators.email],);
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'You must enter a valid email';
@@ -25,6 +21,8 @@ export class AppComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
+
+  //Password confirm and password validation
   passFormControl = new FormControl('', [Validators.required, Validators.minLength(8),Validators.nullValidator] );
   confirmFormControl = new FormControl('', [Validators.required, Validators.minLength(8),Validators.nullValidator]);
 
@@ -37,8 +35,21 @@ export class AppComponent {
     else {
       this.passFormControl.setErrors(this.passFormControl.errors ? { ...this.passFormControl.errors } : null);
       this.confirmFormControl.setErrors(this.confirmFormControl.errors ? { ...this.confirmFormControl.errors } : null);
-      
-      
     }
   }
+
+  
+  clickButton= '';
+  submitButton(){
+    if (this.email.hasError('required'), this.passFormControl.value == this.confirmFormControl.value){
+
+console.log('ok');
+    }
+  }
+
+
+
+
+
+
   }
